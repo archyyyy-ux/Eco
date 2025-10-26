@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Éco-Numérique{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {% block head_extra %}{% endblock %}
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('accueil') }}" class="nav-logo">Éco-Numérique</a>
+            <div class="nav-menu">
+                <a href="{{ url_for('accueil') }}"
+                    class="nav-link {% if request.endpoint == 'accueil' %}active{% endif %}">Accueil</a>
+                <a href="{{ url_for('types_pollution') }}"
+                    class="nav-link {% if request.endpoint == 'types_pollution' %}active{% endif %}">Types de
+                    Pollution</a>
+                <a href="{{ url_for('chiffres') }}"
+                    class="nav-link {% if request.endpoint == 'chiffres' %}active{% endif %}">Chiffres</a>
+                <a href="{{ url_for('ia_pollution') }}"
+                    class="nav-link {% if request.endpoint == 'ia_pollution' %}active{% endif %}">IA & Pollution</a>
+                <a href="{{ url_for('gestes') }}"
+                    class="nav-link {% if request.endpoint == 'gestes' %}active{% endif %}">Gestes Écolos</a>
+                <a href="{{ url_for('gafam') }}"
+                    class="nav-link {% if request.endpoint == 'gafam' %}active{% endif %}">GAFAM</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Éco-Numérique - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</body>
+
+</html>

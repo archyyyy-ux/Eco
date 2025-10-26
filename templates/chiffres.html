@@ -1,0 +1,230 @@
+{% extends "base.html" %}
+
+{% block head_extra %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+
+{% block content %}
+<header class="page-header">
+    <h1>{{ titre }}</h1>
+    {% if sous_titre %}
+    <p class="subtitle">{{ sous_titre }}</p>
+    {% endif %}
+</header>
+
+<section class="content-section">
+    <div class="container">
+        <p class="main-text">{{ contenu }}</p>
+
+        <!-- Section des chiffres importants -->
+        <div class="chiffres-grid">
+            {% for chiffre in chiffres %}
+            <div class="chiffre-card">
+                <div class="chiffre-valeur">{{ chiffre.valeur }}</div>
+                <div class="chiffre-description">{{ chiffre.description }}</div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Graphiques -->
+        <div class="graphiques-section">
+            <h2>Visualisations des Données</h2>
+
+            <div class="graphiques-grid">
+                <div class="graphique-container">
+                    <canvas id="gesChart"></canvas>
+                </div>
+
+                <div class="graphique-container">
+                    <canvas id="empreinteChart"></canvas>
+                </div>
+
+                <div class="graphique-container">
+                    <canvas id="energieChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sources -->
+        {% if sources %}
+        <div class="sources-section">
+            <h3>Sources des données</h3>
+            <div class="sources-list">
+                {% for source in sources %}
+                <span class="source-tag">{{ source }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Graphique 1 : Émissions de GES - Taille réduite
+    const gesCtx = document.getElementById('gesChart').getContext('2d');
+    const gesChart = new Chart(gesCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Numérique', 'Aviation civile'],
+            datasets: [{
+                label: '% des émissions mondiales GES',
+                data: [3.5, 2.8],
+                backgroundColor: [
+                    'rgba(39, 174, 96, 0.8)',
+                    'rgba(52, 152, 219, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(39, 174, 96, 1)',
+                    'rgba(52, 152, 219, 1)'
+                ],
+                borderWidth: 2,
+                borderRadius: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        font: {
+                            size: 12,
+                            family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+                        }
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Émissions GES : Numérique vs Aviation',
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    padding: 10
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Pourcentage (%)',
+                        font: {
+                            size: 12,
+                            weight: 'bold'
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    // Graphique 2 : Répartition empreinte carbone - Taille réduite
+    const empreinteCtx = document.getElementById('empreinteChart').getContext('2d');
+    const empreinteChart = new Chart(empreinteCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Fabrication (70%)', 'Utilisation (30%)'],
+            datasets: [{
+                data: [70, 30],
+                backgroundColor: [
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(39, 174, 96, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(231, 76, 60, 1)',
+                    'rgba(39, 174, 96, 1)'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        font: {
+                            size: 11,
+                            family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+                        },
+                        padding: 15
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Empreinte carbone d\'un ordinateur',
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    padding: 10
+                }
+            }
+        }
+    });
+
+    // Graphique 3 : Consommation électrique - Taille réduite
+    const energieCtx = document.getElementById('energieChart').getContext('2d');
+    const energieChart = new Chart(energieCtx, {
+        type: 'line',
+        data: {
+            labels: ['2020', '2022', '2024', '2026', '2028', '2030'],
+            datasets: [{
+                label: 'Consommation électrique (%)',
+                data: [10, 11, 12, 13, 14, 15],
+                borderColor: 'rgba(39, 174, 96, 1)',
+                backgroundColor: 'rgba(39, 174, 96, 0.1)',
+                borderWidth: 3,
+                tension: 0.4,
+                fill: true,
+                pointBackgroundColor: 'rgba(39, 174, 96, 1)',
+                pointBorderColor: '#fff',
+                pointBorderWidth: 2,
+                pointRadius: 5
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        font: {
+                            size: 12,
+                            family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+                        }
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Évolution consommation électrique',
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    padding: 10
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Pourcentage (%)',
+                        font: {
+                            size: 12,
+                            weight: 'bold'
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+{% endblock %}

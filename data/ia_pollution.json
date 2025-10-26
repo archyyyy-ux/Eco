@@ -1,0 +1,55 @@
+{
+    "titre": "IA et Pollution Numérique",
+    "sous_titre": "L'impact environnemental de l'intelligence artificielle",
+    "contenu": "L'intelligence artificielle, bien que prometteuse, représente un défi majeur pour l'environnement. Son développement et son utilisation massive génèrent une consommation énergétique considérable et contribuent significativement à la pollution numérique.",
+    "sections": [
+        {
+            "titre": "🏭 Les Data Centers : Cœur énergivore de l'IA",
+            "texte": "Les causes de cette pollution se traduit par les utilisateurs avec leurs différents équipements informatiques à savoir les centres de données ou data center et enfin les services et applications numériques."
+        },
+        {
+            "titre": "⚡ L'apprentissage des modèles : un vrai dévoreur d'électricité",
+            "texte": "Avant même d'être utilisée, une IA doit 'apprendre'. Cet entraînement, surtout pour les gros modèles comme GPT-4, demande une puissance de calcul phénoménale. Des milliers de serveurs et de processeurs graphiques (GPU) tournent à plein régime, consommant une quantité d'électricité colossale. Plus l'IA est complexe, plus sa faim en énergie est grande."
+        },
+        {
+            "titre": "💻 L'utilisation quotidienne qui pèse lourd",
+            "texte": "Même une fois formée, l'IA continue de consommer. Chaque recherche par image, chaque question posée à un assistant virtuel, mobilise des data centers et des infrastructures réseau qui fonctionnent 24h/24. Et ce n'est pas tout : refroidir ces centres de données demande encore plus d'énergie et d'eau, ce qui alourdit davantage leur empreinte écologique."
+        },
+        {
+            "titre": "🔄 La course à la performance qui génère des déchets",
+            "texte": "La technologie évolue à un rythme effréné. Pour rester compétitifs, les équipements sont souvent remplacés bien avant leur fin de vie, créant ainsi un flux constant de déchets électroniques. Privilégier le renouvellement à la réparation ou au réemploi a un coût élevé en énergie et en matières premières."
+        },
+        {
+            "titre": "☁️ Le poids invisible du stockage et du transport des données",
+            "texte": "Toutes les données que l'IA utilise et génère doivent être stockées dans le 'cloud' et transitent par internet. Ces transferts et ce stockage permanents reposent sur un réseau mondial de serveurs, dont la consommation d'énergie augmente mécaniquement avec le nombre d'utilisateurs."
+        },
+        {
+            "titre": "📊 Un impact qui se mesure déjà",
+            "texte": "Concrètement, cet appétit énergétique se traduit par une hausse significative des émissions de gaz à effet de serre des géants du secteur. Par exemple, Google a vu ses émissions augmenter de 48 % depuis 2019, et Microsoft de 29 % depuis 2020. Des chiffres qui illustrent le défi que représente l'IA pour la transition écologique."
+        }
+    ],
+    "chiffres_ia": [
+        {
+            "valeur": "48%",
+            "description": "d'augmentation des émissions de Google depuis 2019"
+        },
+        {
+            "valeur": "29%",
+            "description": "d'augmentation des émissions de Microsoft depuis 2020"
+        },
+        {
+            "valeur": "x100",
+            "description": "la consommation énergétique d'une requête IA vs recherche web classique"
+        },
+        {
+            "valeur": "24h/24",
+            "description": "fonctionnement des data centers pour l'entraînement des modèles IA"
+        }
+    ],
+    "sources": [
+        "S&P Global",
+        "Google Sustainability Report",
+        "Microsoft Environmental Report",
+        "The Shift Project"
+    ]
+}

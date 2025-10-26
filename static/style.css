@@ -1,0 +1,748 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+}
+
+/* Navigation */
+.navbar {
+    background: #27ae60;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background-color: #219653;
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background-color: #1e8449;
+    font-weight: 600;
+}
+
+/* Contenu principal */
+.main-content {
+    min-height: calc(100vh - 140px);
+}
+
+.page-header {
+    background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+    padding: 4rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.page-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.content-section {
+    padding: 2rem 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.main-text {
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+    text-align: justify;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Sections grid */
+.sections-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+.section-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #27ae60;
+    transition: transform 0.3s ease;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+}
+
+.section-card h3 {
+    color: #27ae60;
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.section-card p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* Styles pour la page chiffres */
+.chiffres-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.chiffre-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fff8 100%);
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(39, 174, 96, 0.15);
+    border: 2px solid #e8f5e8;
+    transition: all 0.3s ease;
+}
+
+.chiffre-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(39, 174, 96, 0.25);
+}
+
+.chiffre-valeur {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #27ae60;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.chiffre-description {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Section graphiques améliorée */
+.graphiques-section {
+    margin: 4rem 0;
+}
+
+.graphiques-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.graphiques-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.graphique-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styles améliorés pour les graphiques IA */
+.graphique-full-width {
+    margin-bottom: 3rem;
+}
+
+.graphique-container-large {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.graphiques-duo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.graphique-container-medium {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sources */
+.sources-section {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid #ecf0f1;
+}
+
+.sources-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.sources-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.source-tag {
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.source-tag:hover {
+    background: #27ae60;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 4rem;
+}
+
+.footer p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Styles pour la page gestes */
+.gestes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.geste-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fff8 100%);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(39, 174, 96, 0.15);
+    border: 2px solid #e8f5e8;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.geste-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(39, 174, 96, 0.25);
+}
+
+.geste-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #27ae60, #2ecc71);
+}
+
+.geste-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.geste-icone {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.geste-titre {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.geste-description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.geste-impact {
+    background: rgba(39, 174, 96, 0.1);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #27ae60;
+}
+
+.impact-label {
+    font-weight: 700;
+    color: #27ae60;
+    margin-right: 0.5rem;
+}
+
+/* Conseils supplémentaires */
+.conseils-section {
+    margin: 4rem 0;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #f8fff8 0%, #ffffff 100%);
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.conseils-section h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.conseils-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.conseil-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.conseil-item:hover {
+    transform: translateX(5px);
+}
+
+.conseil-bullet {
+    background: #27ae60;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.conseil-text {
+    color: #555;
+    font-weight: 500;
+}
+
+/* Bénéfices */
+.benefices-section {
+    margin: 4rem 0;
+}
+
+.benefices-section h2 {
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.benefices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.benefice-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.benefice-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefice-icone {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.benefice-card h4 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.benefice-card p {
+    color: #666;
+    line-height: 1.5;
+}
+/* Styles pour la page GAFAM */
+.entreprises-section {
+    margin: 4rem 0;
+}
+
+.entreprises-section h2 {
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.entreprises-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.entreprise-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    border-top: 4px solid #27ae60;
+}
+
+.entreprise-card:hover {
+    transform: translateY(-5px);
+}
+
+.entreprise-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 1rem;
+}
+
+.entreprise-icone {
+    font-size: 2.5rem;
+    margin-right: 1rem;
+}
+
+.entreprise-header h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.entreprise-chiffres {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.entreprise-chiffres li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f8f9fa;
+    color: #555;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.entreprise-chiffres li:before {
+    content: "•";
+    color: #27ae60;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.entreprise-chiffres li:last-child {
+    border-bottom: none;
+}
+
+/* Section explications */
+.explications-section {
+    margin: 4rem 0;
+}
+
+.explications-section h2 {
+    color: #2c3e50;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.explications-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.explication-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #27ae60;
+}
+
+.explication-card h3 {
+    color: #27ae60;
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.explication-card p {
+    color: #666;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* Responsive pour GAFAM */
+@media (max-width: 768px) {
+    .entreprises-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .entreprise-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .entreprise-icone {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .explications-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .explication-card {
+        padding: 2rem;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .page-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .page-header {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .graphiques-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .graphique-container {
+        height: 250px;
+    }
+
+    .chiffres-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chiffre-valeur {
+        font-size: 2.2rem;
+    }
+
+    .section-card {
+        padding: 2rem;
+    }
+
+    .graphiques-duo {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .graphique-container-large {
+        height: 300px;
+        padding: 1.5rem;
+    }
+
+    .graphique-container-medium {
+        height: 280px;
+    }
+
+    .gestes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .geste-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .geste-icone {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .conseils-section {
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+
+    .benefices-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .chiffre-valeur {
+        font-size: 2rem;
+    }
+
+    .graphique-container {
+        height: 220px;
+        padding: 1rem;
+    }
+
+    .graphique-container-large {
+        height: 250px;
+    }
+
+    .graphique-container-medium {
+        height: 220px;
+    }
+
+    .geste-card {
+        padding: 1.5rem;
+    }
+
+    .geste-icone {
+        font-size: 2rem;
+    }
+
+    .geste-titre {
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsive pour les graphiques */
+@media (max-width: 968px) {
+    .graphiques-duo {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .graphique-container-large {
+        height: 300px;
+        padding: 1.5rem;
+    }
+
+    .graphique-container-medium {
+        height: 280px;
+    }
+}

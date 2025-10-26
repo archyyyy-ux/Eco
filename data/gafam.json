@@ -1,0 +1,90 @@
+{
+    "titre": "L'Empreinte Carbone des GAFAM",
+    "sous_titre": "L'impact environnemental des géants du numérique",
+    "contenu": "L'impact environnemental des GAFAM (Google, Apple, Facebook [Meta], Amazon et Microsoft) constitue un enjeu majeur dans le bilan carbone global d'Internet. Cet impact ne cesse de s'accroître, porté par l'expansion continue des services numériques, particulièrement le cloud computing et l'intelligence artificielle.",
+    "chiffres_cles": [
+        {
+            "valeur": "3.5%",
+            "description": "des émissions mondiales de GES dues au numérique en 2019"
+        },
+        {
+            "valeur": "+8%",
+            "description": "croissance annuelle des émissions entre 2014 et 2019"
+        },
+        {
+            "valeur": "7%",
+            "description": "part prévue du numérique dans les émissions mondiales d'ici 2025"
+        },
+        {
+            "valeur": "2%",
+            "description": "de l'électricité mondiale consommée par les data centers"
+        }
+    ],
+    "entreprises": [
+        {
+            "nom": "Google",
+            "icone": "🔍",
+            "chiffres": [
+                "Émissions augmentées de 48% depuis 2019",
+                "Objectif carboneutralité d'ici 2030",
+                "Investissements massifs dans les énergies renouvelables"
+            ]
+        },
+        {
+            "nom": "Apple",
+            "icone": "🍎",
+            "chiffres": [
+                "Engagement neutralité carbone d'ici 2030",
+                "Recyclage avancé des produits",
+                "Énergie 100% renouvelable dans les installations"
+            ]
+        },
+        {
+            "nom": "Meta (Facebook)",
+            "icone": "📱",
+            "chiffres": [
+                "Objectif zéro émission nette d'ici 2030",
+                "Data centers optimisés pour l'efficacité énergétique",
+                "Compensation carbone importante"
+            ]
+        },
+        {
+            "nom": "Amazon",
+            "icone": "📦",
+            "chiffres": [
+                "Plus gros acheteur corporate d'énergies renouvelables",
+                "Objectif zéro carbone d'ici 2040",
+                "Investissements dans l'éolien et le solaire"
+            ]
+        },
+        {
+            "nom": "Microsoft",
+            "icone": "💻",
+            "chiffres": [
+                "Engagement carbone négatif d'ici 2030",
+                "Émissions augmentées de 29% depuis 2020",
+                "Fonds climat de 1 milliard de dollars"
+            ]
+        }
+    ],
+    "explications": [
+        {
+            "titre": "La croissance inéluctable",
+            "texte": "Selon le cabinet Carbon4Finance, le secteur numérique était responsable d'environ 3,5 % des émissions mondiales de gaz à effet de serre en 2019. Avec une croissance annuelle de 8 % observée entre 2014 et 2019, cette part pourrait dépasser 7 % d'ici 2025 en l'absence de politiques de sobriété numérique volontaristes."
+        },
+        {
+            "titre": "La concentration énergétique",
+            "texte": "Cette consommation énergétique se concentre notamment dans les centres de données, qui utilisent à eux seuls près de 2 % de l'électricité mondiale. Si les entreprises concernées augmentent leurs investissements dans les énergies renouvelables, leur demande en électricité reste très élevée."
+        },
+        {
+            "titre": "Les défis techniques",
+            "texte": "Cette forte consommation s'explique par des besoins importants en refroidissement des infrastructures et par l'utilisation de métaux rares dans le matériel informatique. Le refroidissement des data centers représente jusqu'à 40% de leur consommation totale."
+        }
+    ],
+    "sources": [
+        "Carbon4Finance",
+        "Rapports de développement durable GAFAM",
+        "The Shift Project",
+        "ADEME"
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "titre": "Chiffres Clés de la Pollution Numérique",
+    "sous_titre": "Les données qui alertent sur l'impact environnemental du digital",
+    "contenu": "Découvrez les chiffres marquants de la pollution numérique à travers le monde. Ces données révèlent l'urgence d'agir pour un numérique plus responsable.",
+    "chiffres": [
+        {
+            "valeur": "3 à 4%",
+            "description": "des émissions mondiales de gaz à effet de serre sont dues au numérique - comparable au secteur de l'aviation civile"
+        },
+        {
+            "valeur": "4.4%",
+            "description": "de l'empreinte carbone nationale en France en 2022 (ADEME)"
+        },
+        {
+            "valeur": "+45%",
+            "description": "d'augmentation possible d'ici 2030 en France si aucune mesure n'est prise (Arcep)"
+        },
+        {
+            "valeur": "10-15%",
+            "description": "de l'électricité mondiale consommée par le numérique"
+        },
+        {
+            "valeur": "70%",
+            "description": "de l'empreinte carbone d'un ordinateur portable est attribuable à sa fabrication"
+        },
+        {
+            "valeur": "1 million",
+            "description": "de tonnes de déchets électroniques générés chaque année"
+        }
+    ],
+    "sources": [
+        "Arcep",
+        "ADEME",
+        "The Shift Project",
+        "ACM Digital Library",
+        "Network World"
+    ]
+}

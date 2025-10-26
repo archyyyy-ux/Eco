@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="page-header">
+    <h1>{{ titre }}</h1>
+    {% if sous_titre %}
+    <p class="subtitle">{{ sous_titre }}</p>
+    {% endif %}
+</header>
+
+<section class="content-section">
+    <div class="container">
+        <p class="main-text">{{ contenu }}</p>
+
+        <!-- Grille des gestes -->
+        <div class="gestes-grid">
+            {% for geste in gestes %}
+            <div class="geste-card">
+                <div class="geste-header">
+                    <div class="geste-icone">{{ geste.icone }}</div>
+                    <h3 class="geste-titre">{{ geste.titre }}</h3>
+                </div>
+                <p class="geste-description">{{ geste.description }}</p>
+                <div class="geste-impact">
+                    <span class="impact-label">Impact :</span>
+                    {{ geste.impact }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Conseils supplémentaires -->
+        <div class="conseils-section">
+            <h2>Autres bonnes pratiques</h2>
+            <div class="conseils-list">
+                {% for conseil in conseils_supplementaires %}
+                <div class="conseil-item">
+                    <span class="conseil-bullet">✓</span>
+                    <span class="conseil-text">{{ conseil }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Bénéfices -->
+        <div class="benefices-section">
+            <h2>Les bénéfices de ces gestes</h2>
+            <div class="benefices-grid">
+                <div class="benefice-card">
+                    <div class="benefice-icone">🌍</div>
+                    <h4>Réduction CO₂</h4>
+                    <p>Jusqu'à 50% d'émissions en moins</p>
+                </div>
+                <div class="benefice-card">
+                    <div class="benefice-icone">💸</div>
+                    <h4>Économies</h4>
+                    <p>Réduction de la facture d'électricité</p>
+                </div>
+                <div class="benefice-card">
+                    <div class="benefice-icone">⚡</div>
+                    <h4>Performance</h4>
+                    <p>Appareils plus rapides et durables</p>
+                </div>
+                <div class="benefice-card">
+                    <div class="benefice-icone">🔄</div>
+                    <h4>Durabilité</h4>
+                    <p>Prolongation de la vie des équipements</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sources -->
+        {% if sources %}
+        <div class="sources-section">
+            <h3>Sources et références</h3>
+            <div class="sources-list">
+                {% for source in sources %}
+                <span class="source-tag">{{ source }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

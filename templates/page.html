@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<header class="page-header">
+    <h1>{{ titre }}</h1>
+    {% if sous_titre %}
+    <p class="subtitle">{{ sous_titre }}</p>
+    {% endif %}
+</header>
+
+<section class="content-section">
+    <div class="container">
+        <p class="main-text">{{ contenu }}</p>
+
+        {% if sections %}
+        <div class="sections-grid">
+            {% for section in sections %}
+            <div class="section-card">
+                <h3>{{ section.titre }}</h3>
+                <p>{{ section.texte }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}

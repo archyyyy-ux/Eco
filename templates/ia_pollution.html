@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+
+{% block head_extra %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+
+{% block content %}
+<header class="page-header">
+    <h1>{{ titre }}</h1>
+    {% if sous_titre %}
+    <p class="subtitle">{{ sous_titre }}</p>
+    {% endif %}
+</header>
+
+<section class="content-section">
+    <div class="container">
+        <p class="main-text">{{ contenu }}</p>
+
+        <!-- Chiffres clés IA -->
+        {% if chiffres_ia %}
+        <div class="chiffres-grid">
+            {% for chiffre in chiffres_ia %}
+            <div class="chiffre-card">
+                <div class="chiffre-valeur">{{ chiffre.valeur }}</div>
+                <div class="chiffre-description">{{ chiffre.description }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Sections détaillées -->
+        {% if sections %}
+        <div class="sections-grid">
+            {% for section in sections %}
+            <div class="section-card">
+                <h3>{{ section.titre }}</h3>
+                <p>{{ section.texte }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <!-- Graphiques spécifiques IA - Structure améliorée -->
+        <div class="graphiques-section">
+            <h2>Impact Énergétique de l'IA</h2>
+
+            <!-- Premier graphique en pleine largeur -->
+            <div class="graphique-full-width">
+                <div class="graphique-container-large">
+                    <canvas id="comparaisonChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Deux graphiques côte à côte -->
+            <div class="graphiques-duo">
+                <div class="graphique-container-medium">
+                    <canvas id="emissionsChart"></canvas>
+                </div>
+                <div class="graphique-container-medium">
+                    <canvas id="energieChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sources -->
+        {% if sources %}
+        <div class="sources-section">
+            <h3>Sources</h3>
+            <div class="sources-list">
+                {% for source in sources %}
+                <span class="source-tag">{{ source }}</span>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Graphique 1 : Comparaison consommation (pleine largeur)
+    const comparaisonCtx = document.getElementById('comparaisonChart').getContext('2d');
+    const comparaisonChart = new Chart(comparaisonCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Recherche web classique', 'Requête IA simple', 'Entraînement modèle IA'],
+            datasets: [{
+                label: 'Consommation énergétique relative',
+                data: [1, 100, 100000],
+                backgroundColor: [
+                    'rgba(39, 174, 96, 0.8)',
+                    'rgba(243, 156, 18, 0.8)',
+                    'rgba(231, 76, 60, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(39, 174, 96, 1)',
+                    'rgba(243, 156, 18, 1)',
+                    'rgba(231, 76, 60, 1)'
+                ],
+                borderWidth: 2,
+                borderRadius: 6
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: 'Comparaison de la consommation énergétique',
+                    font: {
+                        size: 16,
+                        weight: 'bold',
+                        family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+                    },
+                    padding: 20
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            let label = context.dataset.label || '';
+                            if (label) {
+                                label += ': ';
+                            }
+                            if (context.parsed.y !== null) {
+                                if (context.parsed.y >= 1000) {
+                                    label += context.parsed.y.toLocaleString() + 'x plus';
+                                } else {
+                                    label += context.parsed.y + 'x plus';
+                                }
+                            }
+                            return label;
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    type: 'logarithmic',
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Facteur de consommation (échelle logarithmique)',
+                        font: {
+                            size: 12,
+                            weight: 'bold'
+                        }
+                    },
+                    grid: {
+                        color: 'rgba(0, 0, 0, 0.1)'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        }
+    });
+
+    // Graphique 2 : Émissions des géants tech
+    const emissionsCtx = document.getElementById('emissionsChart').getContext('2d');
+    const emissionsChart = new Chart(emissionsCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Google', 'Microsoft'],
+            datasets: [{
+                label: 'Augmentation depuis 2019',
+                data: [48, 29],
+                backgroundColor: [
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(52, 152, 219, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(231, 76, 60, 1)',
+                    'rgba(52, 152, 219, 1)'
+                ],
+                borderWidth: 2,
+                borderRadius: 6
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        font: {
+                            size: 12,
+                            family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+                        }
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Augmentation des émissions GES',
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    padding: 15
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Pourcentage (%)',
+                        font: {
+                            size: 11,
+                            weight: 'bold'
+                        }
+                    },
+                    grid: {
+                        color: 'rgba(0, 0, 0, 0.1)'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    }
+                }
+            }
+        }
+    });
+
+    // Graphique 3 : Consommation énergétique IA
+    const energieCtx = document.getElementById('energieChart').getContext('2d');
+    const energieChart = new Chart(energieCtx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Entraînement modèles', 'Infrastructure', 'Refroidissement', 'Transport données'],
+            datasets: [{
+                data: [40, 30, 20, 10],
+                backgroundColor: [
+                    'rgba(231, 76, 60, 0.8)',
+                    'rgba(52, 152, 219, 0.8)',
+                    'rgba(155, 89, 182, 0.8)',
+                    'rgba(39, 174, 96, 0.8)'
+                ],
+                borderColor: [
+                    'rgba(231, 76, 60, 1)',
+                    'rgba(52, 152, 219, 1)',
+                    'rgba(155, 89, 182, 1)',
+                    'rgba(39, 174, 96, 1)'
+                ],
+                borderWidth: 2
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'right',
+                    labels: {
+                        font: {
+                            size: 11,
+                            family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+                        },
+                        padding: 15,
+                        boxWidth: 12
+                    }
+                },
+                title: {
+                    display: true,
+                    text: 'Répartition consommation',
+                    font: {
+                        size: 14,
+                        weight: 'bold'
+                    },
+                    padding: 15
+                }
+            },
+            cutout: '45%'
+        }
+    });
+</script>
+{% endblock %}

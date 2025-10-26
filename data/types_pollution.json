@@ -1,0 +1,19 @@
+{
+    "titre": "Types de Pollution Numérique",
+    "sous_titre": "Les différentes catégories de pollution digitale",
+    "contenu": "La pollution numérique est un ensemble d'impacts environnementaux négatifs causés par la technologie informatique et de la communication. Elle se manifeste sous plusieurs formes et peut être classée sous trois catégories : En premier cas il y a la pollution liée à la fabrication des équipements, en second cas on retrouve la pollution liée à l'utilisation, et pour finir la pollution liée à la fin de vie des équipements.",
+    "sections": [
+        {
+            "titre": "Pollution liée à la fabrication",
+            "texte": "En ce qui concerne le premier cas nous prenons en compte l'épuisement des ressources naturelles (smartphone, ordinateur, objets connectés, etc…). La pollution chimique due à la fabrication des équipements génère des déchets toxiques et radioactifs polluant les sols et les eaux ce qui a un grand effet négatif tant pour la santé des Hommes mais aussi pour la nature. Les usines de fabrication contribuent aux émissions d'effets de serre et de particules fines."
+        },
+        {
+            "titre": "Pollution liée au matériel",
+            "texte": "Nous retrouvons la fabrication intensive en ressources. Tels que la création de smartphones, d'ordinateurs et autres appareils qui nécessite l'extraction de métaux rares aux conditions écologique et humaines désastreuses. Il est de même en ce qui concerne les déchets électroniques aussi appelés (e-déchets), ces déchets sont souvent mal recyclés libérant des substances polluantes dans l'environnement."
+        },
+        {
+            "titre": "Pollution liée à l'utilisation",
+            "texte": "Nous avons la consommation massive tels que les e-mails, vidéo, etc. … qui consomme énormément d'énergies. C'est sans oublier les activités polluantes et les gaz à effets de serre. Le passage au numérique n'a pas été prometteur sur l'impact environnemental au contraire ce dernier est en forte hausse et pourrait bien être multiplié par trois d'ici une trentaine d'année si rien ne change."
+        }
+    ]
+}

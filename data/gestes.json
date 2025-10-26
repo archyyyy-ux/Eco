@@ -1,0 +1,86 @@
+{
+    "titre": "Gestes pour Réduire la Pollution Numérique",
+    "sous_titre": "11 actions simples pour un numérique plus responsable",
+    "contenu": "Chacun de nous peut contribuer à réduire l'impact environnemental du numérique. Voici 11 gestes simples mais efficaces à adopter au quotidien.",
+    "gestes": [
+        {
+            "icone": "📧",
+            "titre": "Trier et limiter les e-mails",
+            "description": "Supprimez les e-mails inutiles et évitez les envois multiples. Un e-mail stocké consomme de l'énergie en permanence.",
+            "impact": "Économie d'énergie des data centers"
+        },
+        {
+            "icone": "🌐",
+            "titre": "Fermer les onglets inactifs",
+            "description": "Chaque onglet ouvert consomme de la mémoire et de l'énergie. Fermez ceux que vous n'utilisez pas.",
+            "impact": "Réduction consommation RAM et CPU"
+        },
+        {
+            "icone": "💡",
+            "titre": "Baisser la luminosité de l'écran",
+            "description": "Réduire la luminosité de 30% peut diminuer la consommation énergétique de 20%.",
+            "impact": "Économie batterie et électricité"
+        },
+        {
+            "icone": "🔌",
+            "titre": "Débrancher les appareils inutilisés",
+            "description": "Les appareils en veille continuent de consommer. Débranchez-les complètement quand possible.",
+            "impact": "Suppression consommation fantôme"
+        },
+        {
+            "icone": "💾",
+            "titre": "Privilégier les supports physiques au cloud",
+            "description": "Pour les gros fichiers, utilisez des disques durs externes plutôt que le cloud storage permanent.",
+            "impact": "Réduction traffic data centers"
+        },
+        {
+            "icone": "🔍",
+            "titre": "Utiliser des moteurs de recherche écoresponsables",
+            "description": "Des alternatives comme Ecosia ou Lilo plantent des arbres avec vos recherches.",
+            "impact": "Compensation carbone"
+        },
+        {
+            "icone": "📶",
+            "titre": "Utiliser le Wi-Fi plutôt que la 4G",
+            "description": "Le Wi-Fi consomme moins d'énergie que les réseaux mobiles pour transférer les mêmes données.",
+            "impact": "Économie énergie réseau"
+        },
+        {
+            "icone": "🎬",
+            "titre": "Télécharger plutôt que streamer",
+            "description": "Pour regarder plusieurs fois un contenu, le télécharger une fois est plus écologique.",
+            "impact": "Réduction bande passante"
+        },
+        {
+            "icone": "🔄",
+            "titre": "Opter pour du matériel reconditionné",
+            "description": "Prolonger la durée de vie des appareils réduit l'impact de la fabrication.",
+            "impact": "Réduction déchets électroniques"
+        },
+        {
+            "icone": "🗑️",
+            "titre": "Supprimer les logiciels inutiles",
+            "description": "Les applications inutilisées consomment des ressources système et des mises à jour énergivores.",
+            "impact": "Optimisation performances"
+        },
+        {
+            "icone": "📹",
+            "titre": "Réduire la qualité des appels vidéo",
+            "description": "En réunion, désactivez la vidéo quand c'est possible, ou réduisez la qualité.",
+            "impact": "Division par 10 de la consommation"
+        }
+    ],
+    "conseils_supplementaires": [
+        "Éteindre complètement son ordinateur la nuit",
+        "Limiter la résolution des vidéos en streaming",
+        "Utiliser le mode sombre quand disponible",
+        "Désactiver les notifications push inutiles",
+        "Nettoyer régulièrement ses fichiers et photos"
+    ],
+    "sources": [
+        "Polytechnique",
+        "ADEME",
+        "GreenIT",
+        "The Shift Project"
+    ]
+}
